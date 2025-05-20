@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  react-app:
+    build: .
+    ports:
+      - "5173:5173"
+    environment:
+      - CI=true
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5173/index.html"]
+      interval: 5s
+      timeout: 15s
+      retries: 10
+      start_period: 10s
+
+  cypress:
+    image: cypress/included:12.17.1
+    depends_on:
+      - react-app
+    working_dir: /e2e
+    volumes:
+      - .:/e2e
+    command: npx cypress run --config baseUrl=http://react-app:5173
