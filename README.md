@@ -6,7 +6,7 @@
 
 ## 📋 Visão Geral
 
-Projeto React com testes E2E usando Cypress em containers Docker e pipeline CI/CD com GitHub Actions.
+Projeto React com testes E2E usando Cypress em containers Docker e pipeline CI com GitHub Actions.
 
 ## 🛠️ Pré-requisitos
 
@@ -79,7 +79,7 @@ Gerar screenshots e vídeos dos testes
 
 Timeout de 60 segundos para inicialização
 
-## 🔄 CI/CD Pipeline
+## 🔄 CI Pipeline
 
 O workflow no GitHub Actions (ci.yml):
 
