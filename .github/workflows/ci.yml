@@ -28,6 +28,5 @@ jobs:
           path: |
             cypress/videos
             cypress/screenshots
-            cypress/logs
-            cypress/reports
+            cypress/results
           if-no-files-found: ignore
