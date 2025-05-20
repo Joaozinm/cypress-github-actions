@@ -1,6 +1,6 @@
 # Post Comment React App
 
-Este repositório contém um aplicativo React simples de comentário de post.
+Este repositório contém um aplicativo React simples de comentário de post, com o objetivo de praticar a criação de um workflow no Github Actions.
 
 ### Pré-requisitos
 
@@ -49,5 +49,3 @@ npm run build
 ```
 
 Isso criará uma pasta `build` no diretório do projeto com os arquivos otimizados para produção.
-
-

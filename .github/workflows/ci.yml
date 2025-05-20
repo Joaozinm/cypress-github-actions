@@ -1,9 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -21,13 +18,12 @@ jobs:
           start: "npm run dev"
           build: "npm run build"
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: cypress-results
           path: |
             cypress/videos
             cypress/screenshots
-            cypress/logs
-            cypress/reports
+            cypress/results
           if-no-files-found: ignore
