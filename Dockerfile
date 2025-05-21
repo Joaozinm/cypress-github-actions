@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+RUN npm run lint
+
 RUN npm run build
 
 RUN ls -la dist/ && [ -f dist/index.html ] || (echo "Build failed: index.html not found!" && exit 1)
